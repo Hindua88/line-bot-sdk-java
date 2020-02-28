@@ -108,6 +108,8 @@ public class KitchenSinkController {
 
     @EventMapping
     public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) throws Exception {
+        log.info("==== DEBUG ====");
+        log.info("==== handleTextMessageEvent METHOD CALLED ====");
         TextMessageContent message = event.getMessage();
         handleTextContent(event.getReplyToken(), event, message);
     }
